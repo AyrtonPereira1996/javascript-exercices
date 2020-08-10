@@ -121,46 +121,46 @@ body{
 
 
     <script type="text/javascript">
-        var linkClear = document.querySelector("#linkClear");
-        var btnSubmit = document.querySelector("#btnSubmit");
-        var radios = document.getElementsByName("operador");
+        var linkClear = document.querySelector("#linkClear")
+        var btnSubmit = document.querySelector("#btnSubmit")
+        var radios = document.getElementsByName("operador")
 
 
         linkClear.addEventListener('click', function () {
-            var number1 = Number(document.querySelector('#number1').value = "");
-            var number2 = Number(document.querySelector('#number2').value = "");
-            var resultado = window.document.querySelector("#resultado").innerHTML = "";
+            var number1 = Number(document.querySelector('#number1').value = "")
+            var number2 = Number(document.querySelector('#number2').value = "")
+            var resultado = window.document.querySelector("#resultado").innerHTML = ""
         })
 
         btnSubmit.addEventListener('click', function () {
-            var number1 = Number(document.querySelector('#number1').value);
-            var number2 = Number(document.querySelector('#number2').value);
-            var resultado = window.document.querySelector("#resultado");
+            var number1 = Number(document.querySelector('#number1').value)
+            var number2 = Number(document.querySelector('#number2').value)
+            var resultado = window.document.querySelector("#resultado")
 
             for (var i = 0; i < radios.length; i++) {
                 if (radios[i].checked) {
                     if (radios[i].value === "soma") {
-                        let soma = (number1 + number2);
-                        resultado.innerHTML = soma;
+                        let soma = (number1 + number2)
+                        resultado.innerHTML = soma
                      
 
                     }
                     if (radios[i].value === "subtracao") {
-                        let subtracao = (number1 - number2);
-                        resultado.innerHTML = subtracao;
+                        let subtracao = (number1 - number2)
+                        resultado.innerHTML = subtracao
                     }
                     if (radios[i].value === "multiplicacao") {
-                        let multiplicacao = (number1 * number2);
-                        resultado.innerHTML = multiplicacao;
+                        let multiplicacao = (number1 * number2)
+                        resultado.innerHTML = multiplicacao
                     }
                     if (radios[i].value === "divisao") {
-                        let divisao = (number1 / number2);
-                        resultado.innerHTML = divisao;
+                        let divisao = (number1 / number2)
+                        resultado.innerHTML = divisao
 
                     }
                     if (radios[i].value === "resto") {
-                        let resto = (number1 % number2);
-                        resultado.innerHTML = resto;
+                        let resto = (number1 % number2)
+                        resultado.innerHTML = resto
                     }
 
                 }
