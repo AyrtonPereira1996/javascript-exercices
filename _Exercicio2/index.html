@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en==pt">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+body{
+    background-color: burlywood;
+}
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        span {
+            font-size: 2em;
+        }
+
+        button {
+            padding: 10px;
+            width: 150px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            background-color: cornflowerblue;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+
+        .main-section {
+            max-width: 500px;
+            margin: 25px auto;
+            border: 2px solid rgb(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.226);
+        }
+
+        .lbl-to-number {
+            display: inline-block;
+            padding: 20px;
+
+
+        }
+
+
+        .lbl-to-number input {
+            max-width: 60px;
+            height: 50px;
+            border-radius: 20px;
+            outline: none;
+            font-size: 1.5em;
+            text-align: center;
+            cursor: pointer !important;
+        }
+
+        .lbl-to-operator {
+            display: block;
+            padding: 20px;
+            cursor: pointer;
+
+        }
+
+        .button-section {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="main-section">
+            <h1>Operações aritmétricas</h1>
+
+            <label for="lbl1" class="lbl-to-number">Primeiro número : <input tabindex="1" type="number" name=""
+                    id="number1"></label>
+            <span>?</span>
+            <label for="lbl2" class="lbl-to-number">Segundo número : <input tabindex="2" type="number" name=""
+                    id="number2"></label><br>
+
+
+            <label for="soma" class="lbl-to-operator">Soma <input value="soma" tabindex="3" type="radio" name="operador"
+                    id="soma"></label>
+            <label for="subtracao" class="lbl-to-operator">Subtração <input value="subtracao" tabindex="4" type="radio"
+                    name="operador" id="subtracao"></label>
+            <label for="multiplicacao" class="lbl-to-operator">Multiplicação <input value="multiplicacao" tabindex="5"
+                    type="radio" name="operador" id="multiplicacao"></label>
+            <label for="divisao" class="lbl-to-operator">Divisão <input value="divisao" tabindex="6" type="radio"
+                    name="operador" id="divisao"></label>
+            <label for="resto" class="lbl-to-operator">Resto da Divisão <input value="resto" tabindex="7" type="radio"
+                    name="operador" id="resto" value="divisao"></label>
+
+            <div class="button-section">
+                <button type="button" id="btnSubmit">Calcular</button>, ou
+                <a href="#" id="linkClear" style="text-decoration: underline;">Limpar campos</a>
+            </div>
+
+
+            <label for="resultado" id="lblResultado">Resultado: <span class="resultado" id="resultado"></span></label>
+            
+
+
+
+        </section>
+    </div>
+
+
+    <script type="text/javascript">
+        var linkClear = document.querySelector("#linkClear");
+        var btnSubmit = document.querySelector("#btnSubmit");
+        var radios = document.getElementsByName("operador");
+
+
+        linkClear.addEventListener('click', function () {
+            var number1 = Number(document.querySelector('#number1').value = "");
+            var number2 = Number(document.querySelector('#number2').value = "");
+            var resultado = window.document.querySelector("#resultado").innerHTML = "";
+        })
+
+        btnSubmit.addEventListener('click', function () {
+            var number1 = Number(document.querySelector('#number1').value);
+            var number2 = Number(document.querySelector('#number2').value);
+            var resultado = window.document.querySelector("#resultado");
+
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value === "soma") {
+                        let soma = (number1 + number2);
+                        resultado.innerHTML = soma;
+                     
+
+                    }
+                    if (radios[i].value === "subtracao") {
+                        let subtracao = (number1 - number2);
+                        resultado.innerHTML = subtracao;
+                    }
+                    if (radios[i].value === "multiplicacao") {
+                        let multiplicacao = (number1 * number2);
+                        resultado.innerHTML = multiplicacao;
+                    }
+                    if (radios[i].value === "divisao") {
+                        let divisao = (number1 / number2);
+                        resultado.innerHTML = divisao;
+
+                    }
+                    if (radios[i].value === "resto") {
+                        let resto = (number1 % number2);
+                        resultado.innerHTML = resto;
+                    }
+
+                }
+            }
+        })
+
+
+    </script>
+
+</body>
+
+
+
+</html>
