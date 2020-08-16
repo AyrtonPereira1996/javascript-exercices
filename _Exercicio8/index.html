@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+        }
+
+        #content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        #container { 
+            max-width: 500px;
+            height: 500px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.61);
+           
+
+
+        }
+
+        label {
+            margin-left: 200px;
+            margin-top: 100px;
+          
+        }
+
+        input {
+            
+            margin-left: 200px;
+            margin-top: 20px;
+            max-width: 100px;
+            height: 80px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            outline: none;
+            font-size: 2em;
+        }
+
+        button{
+            margin-left: 200px;
+            margin-top: 25px;
+            width: 100px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            outline: none;
+            
+        }
+
+        #resultado{
+            margin-left: 200px;
+            margin-top: 25px;
+            width: 100px;
+            padding: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="content">
+        <h1>Impar ou par</h1>
+
+        <section id="container">
+            <label for="txtNumber" id="label">Digite o número<br><input type="text" id="txtNumber"></label><br>
+            <button type="button" id="btn">Obter</button>
+            <div id="resultado">???????????</div>
+        </section>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
