@@ -1,16 +1,16 @@
 var btn = document.querySelector("#btn");
 var resultado = document.querySelector("#resultado");
 
+// AO CLICAR IRA CHAMAR A FUNCAO
+btn.addEventListener("click", imparPar);
 
-btn.addEventListener("click", parImpar);
+// FUNCAO QUE IRA DETERMINAR SE O NUMERO E IMPAR OU PAR
+function imparPar() {
+    let txtNumber = Number(document.querySelector("#txtNumber").value);
 
-function parImpar() {
-    let n = document.querySelector("#txtNumber").value;
-   
-    if (n % 2 == 0) {
-        resultado.innerHTML = "PAR";
+    if (txtNumber % 2 == 0) {
+        resultado.innerHTML = "O número é PAR";
     } else {
-        resultado.innerHTML = "IMPAR";
+        resultado.innerHTML = "O número é IMPAR";
     }
 }
-
