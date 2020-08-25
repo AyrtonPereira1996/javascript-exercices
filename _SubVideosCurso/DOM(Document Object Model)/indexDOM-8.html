@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+        <div id="nissan">
+            
+        </div>
+
+        <button type="button">Remover Versa</button>
+        <button type="button">Remover Sentra</button>
+
+
+        <script>
+            var btnRemoveVersa = document.getElementsByTagName("button")[0];
+            var btnRemoveSentra = document.getElementsByTagName("button")[1];
+            var versa = document.createElement("p");
+            versa.innerHTML = "Versa";
+
+            var sentra = document.createElement("p");
+            sentra.innerHTML = "Sentra"
+
+            document.getElementById("nissan").appendChild(versa);
+            document.getElementById("nissan").appendChild(sentra);
+
+            btnRemoveVersa.addEventListener("click", function(){
+                document.getElementById("nissan").removeChild(versa);
+            })
+
+            btnRemoveSentra.addEventListener("click", function(){
+                document.getElementById("nissan").removeChild(sentra);
+            })
+        </script>
+    </body>
+</html>
