@@ -125,13 +125,14 @@ body{
         var btnSubmit = document.querySelector("#btnSubmit")
         var radios = document.getElementsByName("operador")
 
-
+// IRA LIMPAR CAMPO
         linkClear.addEventListener('click', function () {
             var number1 = Number(document.querySelector('#number1').value = "")
             var number2 = Number(document.querySelector('#number2').value = "")
             var resultado = window.document.querySelector("#resultado").innerHTML = ""
         })
 
+// IRA EFECTUAR OPERACAO ARTMETRICA CONSOANTE A OPCAO RADIO      
         btnSubmit.addEventListener('click', function () {
             var number1 = Number(document.querySelector('#number1').value)
             var number2 = Number(document.querySelector('#number2').value)

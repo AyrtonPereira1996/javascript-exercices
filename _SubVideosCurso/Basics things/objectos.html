@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        
+
+        <script>
+            var pessoa = {
+                genero: "masculino",
+                idade: 24,
+                nome: "Ayrton Pereira",
+                dataNascimento: "1996-03-09",
+                coresPreferidas: {
+                    cor1: "Azul",
+                    cor2: "Vermelho"
+                }
+
+            };
+
+            var pessoa2 = {
+                genero: "Femenino",
+                idade: 25,
+                nome: "Gabriela",
+                dataNascimento: "1995-05-10",
+                coresPreferidas: {
+                    cor1: "amarelo",
+                    cor2: "rosa"
+                }
+
+            }
+
+            
+            console.log(`Pessoa 1 : Nome = ${pessoa.nome}; Genero = ${pessoa.genero}; Idade = ${pessoa.idade}; Data de Nascimento = ${pessoa.dataNascimento}; Cor = ${pessoa.coresPreferidas.cor1} ${pessoa.coresPreferidas.cor2}`);
+            console.log(`Pessoa 2 : Nome = ${pessoa2.nome}; Genero = ${pessoa2.genero}; Idade = ${pessoa2.idade}; Data de Nascimento = ${pessoa2.dataNascimento}; Cor = ${pessoa2.coresPreferidas.cor1} ${pessoa2.coresPreferidas.cor2}`);
+
+        </script>
+    </body>
+</html>

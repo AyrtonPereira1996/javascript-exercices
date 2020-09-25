@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var pessoa = {
+            nome: "Ayrton",
+            idade: 24,
+            profissao: "Tecnico informatico",
+            cidade: "Quelimane"
+        }
+
+        console.log(pessoa);
+
+        function novaPessoa(nome, idade, profissao, cidade) {
+            pessoa.nome = nome;
+            pessoa.idade = idade;
+            pessoa.profissao = profissao;
+            pessoa.cidade = cidade;
+            // return pessoa; TESTE
+        };
+
+        novaPessoa("Rafaela", 24, "Tecnica", "Maputo");
+        console.log(pessoa);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <head>
+    <title>change</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+      <select name="" id="linguagens">
+          <option value="1">Java</option>
+          <option value="2">Javascript</option>
+          <option value="3">PHP</option>
+          <option value="4">Pyhton</option>
+      </select>
+
+
+    <script>
+        var linguagens = document.getElementById("linguagens");
+        linguagens.addEventListener("change", function() {
+            var indexAtual = this.selectedIndex;
+            var options = this.options;
+            console.log(options[indexAtual].text);
+        })
+    </script>
+  </body>
+</html>

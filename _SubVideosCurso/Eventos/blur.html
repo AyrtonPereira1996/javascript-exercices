@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="text" id="nome">
+    <input type="text" id="sobrenome">
+
+
+    <script>
+
+// IRA ALTERAR O VALOR DO CAMPO DE TEXTO CONSOANTE O QUE FOR DIGITADO NA PRIMEIRA CAIXA DE TEXTO
+        window.onload = function() {
+            var nome = document.getElementById("nome");
+            var sobrenome = document.getElementById("sobrenome");
+
+            nome.addEventListener("blur", function() {
+               sobrenome.value = this.value;
+            })
+        }
+
+    </script>
+</body>
+
+</html>

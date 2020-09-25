@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 20px;
+            width: 50px;
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+
+        .link {
+            color: brown;
+            font-weight: bold;
+
+        }
+
+        .tractive{
+            background-color: rgb(168, 168, 212);
+        }
+    </style>
+</head>
+
+<body>
+    <a id="link" href="#">Ola mundo, how are you there?</a>
+    <table>
+        <thead>
+
+            <th>Marca carro</th>
+            <th>Cor carro</th>
+
+        </thead>
+
+        <tbody>
+
+            <tr class="tr">
+                <td>Audi</td>
+                <td>Preto</td>
+            </tr>
+            <tr class="tr">
+                <td>Opel</td>
+                <td>Preto</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+
+
+    <script>
+        var link = document.getElementById("link");
+        var trs = document.getElementsByClassName("tr");
+
+        link.addEventListener('mouseover', function () {
+            link.classList.add("link");
+        })
+
+        link.addEventListener('mouseleave', function () {
+            link.classList.remove("link");
+        })
+
+        for (let i = 0; i < trs.length; i++) {
+            trs[i].addEventListener("mouseover", function () {
+                this.classList.add("tractive");
+            })
+
+            trs[i].addEventListener("mouseleave", function () {
+                this.classList.remove("tractive");
+            })
+        }
+
+    </script>
+</body>
+
+</html>

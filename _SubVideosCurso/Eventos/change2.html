@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <head>
+    <title>change2</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+      <select id="cores">
+          <option value="1">Preto</option>
+          <option value="2">Amarelo</option>
+          <option value="3">Vermelho</option>
+          <option value="4">Verde</option>
+          <option value="5">Cinza</option>
+      </select>
+
+
+      <script>
+          var cores = document.getElementById("cores");
+
+          cores.addEventListener('change', function(){
+              var indiceActual = this.selectedIndex;
+              var options = this.options;
+              console.log(options[indiceActual].text);
+          })
+      </script>
+  </body>
+</html>

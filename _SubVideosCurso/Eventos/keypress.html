@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <div id="result" style="display: none;"></div>
+
+
+<script>
+    var text = document.getElementById("text");
+    var result = document.getElementById("result");
+
+    text.addEventListener("keypress", function(evento) {
+        console.log(evento.keyCode);
+        if (evento.keyCode == 13) {
+            result.style.display = "block";
+            result.innerHTML = "OBA ACERTASTE, clicaste na tecla ENTER!";
+        } else if(evento.keyCode != 13) {
+            result.style.display = "block";
+            result.innerHTML = "Opah, erraste";
+        } else {
+            result.style.display = "block";
+            result.innerHTML = "Nao clicou"
+        }
+            
+    })
+
+</script>
+</body>
+
+</html>

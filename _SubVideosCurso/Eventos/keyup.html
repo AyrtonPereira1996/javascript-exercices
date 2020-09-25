@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+        <input type="text" id="search">
+
+        <div id="result">Nenhuma resultado</div>
+
+    <script>
+        var text = document.getElementById("search");
+        var resultado = document.getElementById("result");
+        var resltadoDefault = "Nenhuma resultado";
+
+// AO DISPARAR O EVENTO KEYUP IRA REESCREVER O CONTEUDO DA DIV
+        text.addEventListener("keyup", function(){
+            resultado.innerHTML = this.value != "" ? this.value : resltadoDefault;
+        })
+
+    </script>
+    </body>
+</html>
