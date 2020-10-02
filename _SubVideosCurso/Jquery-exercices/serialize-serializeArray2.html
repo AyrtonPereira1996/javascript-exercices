@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        form{
+            display: flex;
+            
+        }
+
+        label{
+            display: block;
+            margin: 10px auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <form action="#" method="get">
+        <label for="idName">Seu nome: <input type="text" name="name" id="idName"></label>
+        <label for="idNaturalidade">Sua naturalidade: <input type="text" name="naturalidade" id="idNaturalidade"></label>
+        <label for="idCor">Sua cor favorita: <input type="text" name="cor" id="idCor"></label> 
+
+        <button type="submit">Submeter</button>
+    </form>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        var form = $("form");
+        form.on("submit", function(event){
+            event.preventDefault();
+            var data = $(this).serialize();
+            console.log(data);
+        });
+    </script>
+</body>
+
+</html>

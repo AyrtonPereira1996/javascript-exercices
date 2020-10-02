@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" value="" placeholder="00000-000">
+
+        <label for="logradouro">Logradouro</label>
+        <input type="text" name="logradouro" id="logradouro" placeholder="Avenida ...">
+
+
+        <button>Submit</button>
+    </form>
+
+    <div class="resultado"></div>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        var form = $("form");
+        var resultado = $(".resultado");
+
+        form.on("submit", function (event) {
+            event.preventDefault();
+            var data = $(this).serialize();
+            resultado.text(data);
+        })
+    </script>
+
+</body>
+
+</html>

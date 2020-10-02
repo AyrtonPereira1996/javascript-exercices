@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <button>Clica aqui</button>
+        <span id="mensagem">Ola queridos Moçambicanos, e Mundo</span>
+
+
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+           var button = $('button');
+           var msg = $('#mensagem');
+
+           button.on("click", function(){
+              msg.delay(1000).fadeOut(1500);
+           }) 
+
+        </script>
+    </body>
+</html>

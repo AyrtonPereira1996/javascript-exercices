@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: burlywood;
+            top: 20px;
+            left: 30px;
+            padding: 20px;
+        }
+    
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            display: inline-block;
+        }
+    </style>
+    
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">
+
+            </div>
+        </div>
+
+
+
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+            var container = $(".container");
+            var item = $(".item");
+            // var position = item.position();
+
+            var position = item.offset();
+            console.log(position.left, position.top);
+
+
+        </script>
+
+    </body>
+</html>
